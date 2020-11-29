@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+    margin-left: 1%;
+    padding: 0;
+}
+
+.inline-block {
+    display: inline-block;
+    height: 40%;
+    background: url('/static/images/1_2xAdTM1VO7ti91uNfuDncg.jpeg') ;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.nav1 {
+    background: white;
+    height: 110px;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    left: 0%;
+    width: 20%;
+    margin-left: 1%;
+}
+
+.name {
+    font-family: 'Audiowide', cursive;
+    font-size: 3vw;
+    position: absolute;
+    top: 4%;
+    left: 26%;
+    width: 50%;
+}
+
+.nav {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: 5%;
+}
+
+.py-2 {
+    background-color: #d0fcfd;
+    width: 18vw;
+    margin: 14px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 47px;
+    font-size: 2vw;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.7s;
+    border-radius: 15px 50px;
+    border-left: 3px dashed black;
+}
+
+h3 {
+    border: 4px dashed #5433FF;
+    padding: 1%;
+    display: inline-block;
+}
+
+.basic {
+    text-align: center;
+}
+
+.py-2:hover {
+    transform: scale(1.1);
+    font-size: 2.2vw;
+    text-decoration: none;
+    background-blend-mode: color-dodge;
+    background: linear-gradient(to right, #5433FF, #20BDFF, #A5FECB);
+    color: white;
+}
+
+.details, .page-name {
+    margin: 0 5% 0 1%;
+    text-align: justify;
+    line-height: 200%;
+    font-weight: normal;
+    font-size: 1.2rem;
+    padding: 1%;
+}
+
+h4, .page-name {
+    font-weight: bolder;
+}
+
+.drag-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.drag-slider img {
+    width: 100%;
+    display: block;
+}
+
+.resize {
+    position: absolute;
+    top: 0;
+    left: 0.05%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.handle {
+    /* Thin line seperator */
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    bottom: 4%;
+    width: 3px;
+    margin-left: -10px;
+    margin-right: 10px;
+    background: #eee;
+    cursor: ew-resize;
+}
+
+.handle::after {
+    background: #2980b9;
+    border-radius: 50%;
+    color: yellow;
+    content: "<>";
+    font-size: 25px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    margin: -28px 0 0 -15px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transition: all 0.3s ease 0s;
+    width: 35px;
+}
+
+.ui.container .slider-box {
+    width: 100%;
+    margin-top: 3em;
+}
+
+.code-area {
+    display: flex;
+    height: 200%;
+    width: 43%;
+    flex-direction: column;
+    position: relative;
+    top: 10%;
+    left: 3%;
+}
+
+.code-area textarea {
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 33.33%;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.preview-area {
+    height: 61%;
+    width: 45%;
+    padding: 10px;
+    position: absolute;
+    top: 26%;
+    left: 46%;
+}
+
+.preview-area iframe {
+    width: 100%;
+    height: 100%;
+    border: 5%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 1%;
+}
+
+.answers {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    line-height: 21px;
+}
+
+.question {
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+.main {
+    border-left: 3px dashed red;
+    position: relative;
+    left: 6%;
+    top: 7%;
+}
