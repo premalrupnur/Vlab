@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/ide.css' %}">
+  <link rel="stylesheet" href="{% static 'css/css.css'%}">
+  <script src="{% static 'js/index.js' %}"></script>
+  <title>HTML Virtual Lab</title>
+  <script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/sprinkle.js">
+  </script>
+  <script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/jquery-1.2.6.min.js">
+  </script>
+  <script language="JavaScript" type="text/javascript"
+    src="<?php echo get_option('siteurl') ?>/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="nav1" style="border-bottom:solid red 5px;">
+      <img src="{% static 'images/Rait_new_logo_png.png' %}" alt="" class="logo" height="105px" width="110px">
+      <span class="name">RAIT VIRTUAL LABS</span>
+      <div class="containers py-3" style=" margin-top: 2%; left:93%; " onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+
+
+    <div>
+      <img src="{% static 'images/gearhead.jpg' %}" height="70%" width="30%" style="position:absolute;top:25%;left:11%;">
+    </div>
+
+    <div class="container py-5">
+      <div class="output" id="output">
+        <h1 class="cursor"></h1>
+        <p></p>
+      </div>
+    </div>
+
+
+
+    <button class="button"><a href="index.html"><span>ENTER HTML LAB</span></a></button>
+  </div>
+</body>
+
+</html>
