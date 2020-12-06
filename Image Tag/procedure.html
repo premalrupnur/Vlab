@@ -74,12 +74,14 @@
 					
 <div class="details " style="margin-top: 4%;">
         <p style="font-weight: bold;"><i>These procedure steps will be followed on the simulator</i></p>
-	<ol style="font-weight: lighter;">
+    <ol style="font-weight: lighter;">
+        {% for proc in procedures %}
         <li>The experiment begins with previewing the output of img tag in Preview Section given at the top of the Simulator by giving the values for different attributes like src, alt, width, etc. in Simulator.</li>
         <li>After previewing the output we can see the syntax of img tag in adjacent the Syntax Section.</li>
         <li>After Understanding the Syntax, write HTML code for inserting an image in the Write Code Section given at the left bottom of simulator.</li>
         <li>If there will be any error in the code then Simulator will highlight that error so that it can be rectified.</li>
         <li>Finally after rectifying the errors the result of correct HTML code can be seen in the adjacent Preview Result Section.</li>
+        {% endfor %}
     </ol>
 </div></div>
 					
