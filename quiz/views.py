@@ -22,8 +22,28 @@ def aim(request):
 def procedure(request):
     return render(request,"Experiments/procedure.html")
 
+
+
 def quiz(request):
-    return render(request,"Experiments/quiz.html")
+    
+    q1 = request.GET['question0']
+    q2 = request.GET['question1']
+    q3 = request.GET['question2']
+    q4 = request.GET['question3']
+    q5 = request.GET['question4']
+    count=0
+    if(q1=='a'):
+        count+=1
+    if(q2=='a'):
+        count+=1  
+    if(q3=='a'):
+        count+=1
+    if(q4=='a'):
+        count+=1
+    if(q5=='a'):
+        count+=1
+
+    return render(request,"Experiments/quiz.html",{'count':count})
 
 def references(request):
     return render(request,"Experiments/references.html")
