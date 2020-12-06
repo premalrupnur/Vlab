@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css.css">
+    <link rel="stylesheet" href="{% static 'css/css.css'%}">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../homepage.js"></script>
+    <script src="{% static 'js/homepage.js' %}"></script>
     <title>HTML Virtual Lab</title>
 
     <script>
@@ -30,18 +30,18 @@
 
     <div class="inline-block">
         <div class="nav1" style="border-bottom:dashed red 5px;">
-            <img src="../images/Rait_new_logo_png.png" alt="" class="logo" height="105px" width="60px">
+            <img src="{% static './images/Rait_new_logo_png.png' %}" alt="" class="logo" height="105px" width="60px">
             <span class="name">RAIT VIRTUAL LABS</span>
-            <img src="../images/CSS3_logo_and_wordmark.svg.png" alt=""
+            <img src="{% static './images/CSS3_logo_and_wordmark.svg.png' %}" alt=""
                 style="width:7.3%; float: right; margin-right: 2%;" height="140px" width="40px">
-            <img src="../images/HTML5_Logo_512.png" alt="" style="width: 10%; float: right;" height="140px"
+            <img src="{% static './images/HTML5_Logo_512.png' %}" alt="" style="width: 10%; float: right;" height="140px"
                 width="40px">
         </div>
         <div class="ui container slider-box " style="width:50%;margin: 1%;margin-left:25%;top:10%">
             <div class="drag-slider">
-                <img src="../images/PicsArt_10-20-07.18.58.png" alt="" height="450px">
+                <img src="{% static './images/PicsArt_10-20-07.18.58.png' %}" alt="" height="450px">
                 <div class="resize">
-                    <img src="../images/PicsArt_10-20-07.38.32.png" alt="" height="450px">
+                    <img src="{% static './images/PicsArt_10-20-07.38.32.png' %}" alt="" height="450px">
                 </div>
                 <span class="handle"></span>
             </div>
