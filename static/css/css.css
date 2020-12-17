@@ -9,7 +9,7 @@ body {
 .inline-block {
     display: inline-block;
     height: 40%;
-    background: url('/static/images/1_2xAdTM1VO7ti91uNfuDncg.jpeg') ;
+    background: url('/static/images/1_2xAdTM1VO7ti91uNfuDncg.jpeg');
     width: 100%;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -205,3 +205,4 @@ th, td {
     left: 6%;
     top: 7%;
 }
+

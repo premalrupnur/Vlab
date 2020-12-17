@@ -11,9 +11,10 @@ urlpatterns =[
     path('Experiments/aim.html',views.aim,name='aim'),
     path('Experiments/procedure.html',views.procedure,name='procedure'),
     path('Experiments/quiz.html',views.quiz,name='quiz'),
+    path('Experiments/theory.html',views.theory,name='theory'),
     path('Experiments/references.html',views.references,name='references'),
     path('Experiments/simulation.html',views.simulation,name='simulation'),
-    path('Experiments/theory.html',views.theory,name='theory'),
+    path('Experiments/answers',views.answers,name='answers'),
 
 
 ]
