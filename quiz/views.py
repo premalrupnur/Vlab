@@ -25,6 +25,8 @@ def procedure(request):
 
 
 def quiz(request):
+    return render(request,"Experiments/quiz.html")
+def answers(request):
     
     q1 = request.GET['question0']
     q2 = request.GET['question1']
@@ -38,12 +40,12 @@ def quiz(request):
         count+=1  
     if(q3=='a'):
         count+=1
-    if(q4=='a'):
+    if(q4=='b'):
         count+=1
-    if(q5=='a'):
+    if(q5=='c'):
         count+=1
 
-    return render(request,"Experiments/quiz.html",{'count':count})
+    return render(request,"Experiments/answers.html",{'count':count})
 
 def references(request):
     return render(request,"Experiments/references.html")
