@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // Call & init
 $(document).ready(function(){
     $('.drag-slider').each(function(){

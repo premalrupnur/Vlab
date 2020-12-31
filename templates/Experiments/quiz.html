@@ -16,12 +16,22 @@
   <title>HTML Virtual Lab</title>
 
   <script>
-    jQuery(document).ready(function ($) {
-      $('.counter').counterUp({
-        delay: 15,
-        time: 900
-      });
-    });
+
+  /* jQuery(document).on('submit', '#quiz', function (e) {
+        e.preventDefault();
+
+        var form = $(this);
+        var url = form.attr('action');
+
+        $.ajax({
+          type: 'POST',
+          url: url,
+          data: form.serialize(),
+          success: function (response) {
+            document.getElementById("showresults") = response
+          }
+        });
+      }) */
   </script>
 </head>
 
@@ -33,9 +43,10 @@
     <div class="nav1" style="border-bottom:dashed red 5px;">
       <img src="{% static 'images/Rait_new_logo_png.png' %}" alt="" class="logo" height="105px" width="60px">
       <span class="name">RAIT VIRTUAL LABS</span>
-      <img src="{% static 'images/CSS3_logo_and_wordmark.svg.png' %}" alt="" style="width:7.3%; float: right; margin-right: 2%;"
-        height="140px" width="40px">
-      <img src="{% static 'images/HTML5_Logo_512.png' %}" alt="" style="width: 10%; float: right;" height="140px" width="40px">
+      <img src="{% static 'images/CSS3_logo_and_wordmark.svg.png' %}" alt=""
+        style="width:7.3%; float: right; margin-right: 2%;" height="140px" width="40px">
+      <img src="{% static 'images/HTML5_Logo_512.png' %}" alt="" style="width: 10%; float: right;" height="140px"
+        width="40px">
     </div>
     <div class="ui container slider-box " style="width:50%;margin: 1%;margin-left:25%;top:10%">
       <div class="drag-slider">
@@ -70,7 +81,7 @@
       <a href="theory.html" class="py-2" class="side-nav">Theory</a>
       <a href="procedure.html" class="py-2" class="side-nav">Procedure</a>
       <a href="simulation.html" class="py-2" class="side-nav">Simulation</a>
-      <a href="quiz.html" class="py-2" class="side-nav">Quiz</a>
+      <a href="quiz" class="py-2" class="side-nav">Quiz</a>
       <a href="references.html" class="py-2" class="side-nav">References</a>
 
     </div>
@@ -82,7 +93,8 @@
 
 
       <div class="details " style="border:2px solid black;margin-top: 4%;padding: 2%;">
-        <form action="answers">
+        <form action="quiz" method="POST" id='quiz'>
+          {% csrf_token %}
           <div id="quiz">
             <div class="question"> Q1. The hyperlink created by an anchor tag is applied to the text, image, or other
               HTML
@@ -167,8 +179,11 @@
               </label> </div>
           </div>
           <input type="submit" class="btn btn-primary btn-success"><br>
-          
-          
+          {% for message in messages %}
+          <span id="showresults">{{message}}</span>
+          {% endfor %}
+
+
         </form>
       </div>
     </div>

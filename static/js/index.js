@@ -6,7 +6,7 @@ var i = 0,
 
 // Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
 var textArray = [
-  "wELCOME TO RAIT VIRTUAL LABS  | World class educations from , the leades of tommorow", 
+  "WELCOME TO RAIT VIRTUAL LABS  | World class educations from , the leades of tommorow", 
 "Education is not the learning of, many facts |but the training of the mind to think  "
 ];
 
