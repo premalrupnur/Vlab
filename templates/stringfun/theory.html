@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/css.css'%}">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/homepage.js' %}"></script>
+    <title>HTML Virtual Lab</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        table {
+            border-spacing: 15px;
+        }
+    </style>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 15,
+                time: 900
+            });
+        });
+    </script>
+</head>
+
+<body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+
+    <!--End Google Tag Manager (noscript)-->
+
+    <div class="inline-block">
+        <div class="nav1" style="border-bottom:dashed red 5px;">
+            <img src="{% static './images/Rait_new_logo_png.png' %}" alt="" class="logo" height="105px" width="60px">
+            <span class="name">RAIT VIRTUAL LABS</span>
+            <img src="{% static './images/CSS3_logo_and_wordmark.svg.png' %}" alt=""
+                style="width:7.3%; float: right; margin-right: 2%;" height="140px" width="40px">
+            <img src="{% static './images/HTML5_Logo_512.png' %}" alt="" style="width: 10%; float: right;" height="140px"
+                width="40px">
+        </div>
+        <div class="ui container slider-box " style="width:50%;margin: 1%;margin-left:25%;top:10%">
+            <div class="drag-slider">
+                <img src="{% static './images/PicsArt_10-20-07.18.58.png' %}" alt="" height="450px">
+                <div class="resize">
+                    <img src="{% static './images/PicsArt_10-20-07.38.32.png' %}" alt="" height="450px">
+                </div>
+                <span class="handle"></span>
+            </div>
+        </div>
+
+
+
+        <div class="elementor-shape elementor-shape-bottom" data-negative="false" style="margin:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"
+                style="margin-bottom:-0.04%;fill:white; transform: rotate(180deg);">
+                <path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9">
+                </path>
+            </svg>
+        </div>
+    </div>
+
+
+
+    <div class="row  px-4 " style="margin-top: 7%;
+			
+			color: black;
+			;background-size: cover;
+			height: 450px; margin:0% 0 7% -1%;">
+        <div class="nav flex-column col-sm-3 col-lg-2  sidebar"><a href="aim.html" class="py-2">Aim</a>
+            <a href="theory.html" class="py-2" class="side-nav">Theory</a>
+            <a href="procedure.html" class="py-2" class="side-nav">Procedure</a>
+            <a href="simulation.html" class="py-2" class="side-nav">Simulation</a>
+            <a href="quiz.html" class="py-2" class="side-nav">Quiz</a>
+            <a href="references.html" class="py-2" class="side-nav">References</a>
+
+        </div>
+
+        <div class="main col-sm-9 col-lg-10 pr-5 pb-5 py-3 basic">
+            <span class="lab-name"></span>
+            <h3 class="text-center">Theory</h3></span>
+            <!--labname-->
+
+            <div class="details " style="margin-top: 4%;">
+                # <b><u>THEORY</u></b>
+
+                <ul>
+                <h1>String Length</h1>
+                <li>The length property returns the length of a string:
+                
+                >var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";</br>
+                >var sln = txt.length; 
+                
+                
+                <h1>String in a String</h1>
+                <li>The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:  
+                
+                >var str = "Please locate where 'locate' occurs!";</br>
+                >var pos = str.indexOf("locate");</br>
+                <li>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+                
+                >var str = "Please locate where 'locate' occurs!";</br>
+                >var pos = str.lastIndexOf("locate");</br>
+                <li>Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+                
+                
+                <h1>Searching for a String in a String</h1>
+                <li>The search() method searches a string for a specified value and returns the position of the match:
+                
+                
+                >var str = "Please locate where 'locate' occurs!";</br>
+                >var pos = str.search("locate");
+                <li>The two methods, indexOf() and search(), are NOT equal.
+                <li><ul><li>The search() method cannot take a second start position argument.
+                <li>The indexOf() method cannot take powerful search values (regular expressions).
+                </ul>
+                
+                <h1>Extracting String Parts</h1>
+                <li><u>The slice() Method</u>
+                <li>slice() extracts a part of a string and returns the extracted part in a new string.
+                
+                <li>The method takes 2 parameters: the start position, and the end position (end not included).
+                
+                >This example slices out a portion of a string from position 7 to position 12 (13-1):</br>
+                >var str = "Apple, Banana, Kiwi";</br>
+                >var res = str.slice(7, 13);</br>
+                >The result of res will be:</br>
+                >>Banana</br>
+                
+                <li><u>The substring() Method</u>
+                <li>substring() is similar to slice().
+                
+                <li>The difference is that substring() cannot accept negative indexes.
+                
+                >var str = "Apple, Banana, Kiwi";</br>
+                >var res = str.substring(7, 13);</br>
+                >The result of res will be:</br>
+                >>Banana</br>
+                
+                <li><u>The substr() Method</u>
+                <li>substr() is similar to slice().
+                
+                <li>The difference is that the second parameter specifies the length of the extracted part.
+                
+                >var str = "Apple, Banana, Kiwi";</br>
+                >var res = str.substr(7, 6);</br>
+                >The result of res will be:</br>
+                >>Banana</br>
+                
+                <h1>Replacing String Content</h1>
+                <li>The replace() method replaces a specified value with another value in a string:
+                
+                > str = "Please visit Microsoft!";</br>
+                >var n = str.replace("Microsoft", "W3Schools");</br>
+                
+                <h1>Converting to Upper and Lower Case</h1>
+                <li>A string is converted to upper case with toUpperCase():
+                
+                > var text1 = "Hello World!";       // String</br>
+                > var text2 = text1.toUpperCase();  // text2 is text1 converted to upper 
+                
+                <li>A string is converted to lower case with toLowerCase():
+                
+                >var text1 = "Hello World!";       // String</br>
+                >var text2 = text1.toLowerCase();  // text2 is text1 converted to lower 
+                
+                <h1>The concat() Method</h1>
+                <li>concat() joins two or more strings:
+                
+                > var text1 = "Hello";       // String1</br>
+                > var text2 = "World";       // String2</br>
+                > var text3 = text1.concat(" ", text2);
+                <li>The concat() method can be used instead of the plus operator. These two lines do the same:
+                
+                <h1>String.trim()</h1>
+                <li>The trim() method removes whitespace from both sides of a string:
+                
+                > var str = "       Hello World!        ";</br>
+                > alert(str.trim()); </br>
+                
+                <h1>Extracting String Characters</h1>
+                <li><u>The charAt() Method</u>
+                <li>The charAt() method returns the character at a specified index (position) in a string:
+                
+                >var str = "HELLO WORLD";</br>
+                >str.charAt(0);            // returns H </br>
+                
+                <li><u>The charCodeAt() Method</u>
+                <li>The charCodeAt() method returns the unicode of the character at a specified index in a string:
+                
+                >var str = "HELLO WORLD";</br>
+                >
+                str.charCodeAt(0);         // returns 72 </br>
+                
+                <h1>Converting a String to an Array</h1>
+                <li>A string can be converted to an array with the split() method:
+                
+                > var txt = "a,b,c,d,e";   // String</br>
+                > txt.split(" ");          // Split on spaces</br>
+                </ul>
+              
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

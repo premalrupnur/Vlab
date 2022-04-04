@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css.css">
+    <link rel="stylesheet" href="../style.css">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,86 +24,39 @@
     </script>
 </head>
 
-<body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
-
-    <!--End Google Tag Manager (noscript)-->
-
-    <div class="inline-block">
-        <div class="nav1" style="border-bottom:dashed red 5px;">
-            <img src="../images/Rait_new_logo_png.png" alt="" class="logo" height="105px" width="60px">
-            <span class="name">RAIT VIRTUAL LABS</span>
-            <img src="../images/CSS3_logo_and_wordmark.svg.png" alt=""
-                style="width:7.3%; float: right; margin-right: 2%;" height="140px" width="40px">
-            <img src="../images/HTML5_Logo_512.png" alt="" style="width: 10%; float: right;" height="140px"
-                width="40px">
-        </div>
-        <div class="ui container slider-box " style="width:50%;margin: 1%;margin-left:25%;top:10%">
-            <div class="drag-slider">
-                <img src="../images/PicsArt_10-20-07.18.58.png" alt="" height="450px">
-                <div class="resize">
-                    <img src="../images/PicsArt_10-20-07.38.32.png" alt="" height="450px">
-                </div>
-                <span class="handle"></span>
+  <body onload='ready()'>
+    <div id='container'>
+        <div id='editors'>
+            <div class = 'fa fa-html5 htmlLabel' style="font-size:23px;color:red" id = 'labels'>
+                <button type="button" class="button minButton" onclick="minimizeIframe()"><i class='fa fa-window-minimize'></i></button>
+                <span id='text'>HTML</span>
             </div>
-        </div>
-
-
-
-        <div class="elementor-shape elementor-shape-bottom" data-negative="false" style="margin:0;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"
-                style="margin:0;fill:white; transform: rotate(180deg);">
-                <path class="elementor-shape-fill" d="M761.9,44.1L643.1,27.2L333.8,98L0,3.8V0l1000,0v3.9">
-                </path>
-            </svg>
-        </div>
-    </div>
-
-
-
-    <div class="row  px-4 " style="margin-top: 2%;
-			
-			color: black;
-			;background-size: cover;
-			height: 450px; margin:3% 0 7% -1%;">
-        <div class="nav flex-column col-sm-3 col-lg-2 sidebar"><a href="aim.html" class="py-2">Aim</a>
-            <a href="theory.html" class="py-2" class="side-nav">Theory</a>
-            <a href="procedure.html" class="py-2" class="side-nav">Procedure</a>
-            <a href="simulation.html" class="py-2" class="side-nav">Simulation</a>
-            <a href="quiz.html" class="py-2" class="side-nav">Quiz</a>
-            <a href="references.html" class="py-2" class="side-nav">References</a>
-
-        </div>
-
-
-
-        <div class="main col-sm-9 col-lg-10 pr-5 pb-5 py-3 basic">
-            <span class="lab-name"></span>
-            <h3 class="text-center">SIMULATION</h3></span>
-            <!--labname-->
-
-
-
-            <div class="code-area">
-                <textarea id="htmlCode" placeholder="HTML Code" oninput="showPreview()"></textarea>
+            <div class = 'fa fa-css3 cssLabel' style="font-size:23px;color:red" id='labels'>
+                <span id='text'>CSS</span>
             </div>
-            <div class="preview-area">
-                <iframe id="preview-window"></iframe>
+            <div class = 'fa fa-jsfiddle jsLabel' style="font-size:23px;color:red" id='labels'>
+                <button type="button" class="button downloadCode" onclick="downloadCode()"><i class='fa fa-download'></i></button>
+                <span id='text'>Javascript</span>
+                <button type="button" class="button maxButton" onclick="maximizeIFrame()"><i class='fa fa-window-maximize'></i></button>
             </div>
+
+            <div class='editor' id='htmlEditor'></div>
+            <div class='editor' id='cssEditor'></div>
+            <div class='editor' id='jsEditor'></div>
         </div>
+
+        <iframe id='iframe' frameBorder="0">
+        </iframe>
     </div>
 
-    </div>
-    </div>
-    </div>
+    <script type="text/javascript" src="editor.js"></script>
+
     <script>
-        function showPreview() {
-            var htmlCode = document.getElementById("htmlCode").value;
-            var frame = document.getElementById("preview-window").contentWindow.document;
-            frame.open();
-            frame.write(htmlCode);
-            frame.close();
-        }
+        $(function() {
+        $( "#htmlEditor").resizable();
+        });
     </script>
+
 </body>
 
 </html>
